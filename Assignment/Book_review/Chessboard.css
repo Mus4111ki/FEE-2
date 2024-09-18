@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 0;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+}
+
+.black {
+    background-color: #769656;
+}
+
+.white {
+    background-color: #eeeed2;
+}
+
+/* Adding pawns */
+.square:nth-child(9), .square:nth-child(10), .square:nth-child(11), .square:nth-child(12),
+.square:nth-child(13), .square:nth-child(14), .square:nth-child(15), .square:nth-child(16) {
+    background-image: url('black-pawn.png');
+    background-size: cover;
+}
+
+.square:nth-child(49), .square:nth-child(50), .square:nth-child(51), .square:nth-child(52),
+.square:nth-child(53), .square:nth-child(54), .square:nth-child(55), .square:nth-child(56) {
+    background-image: url('white-pawn.png');
+    background-size: cover;
+}
